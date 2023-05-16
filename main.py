@@ -31,15 +31,15 @@ class NumerologyCalculator(MDApp):
         # logo image
         screen.add_widget(Image(
             source="logos/logo7.png",
-            pos_hint={"center_x": 0.5, "center_y": 0.65}))
+            pos_hint={"center_x": 0.5, "center_y": 0.7}))
 
         # instruction label
         self.label = MDLabel(
             text="Enter a Hebrew word to calculate its numerological value:",
             halign="center",
-            pos_hint={"center_x": 0.5, "center_y": 0.40},
+            pos_hint={"center_x": 0.5, "center_y": 0.5},
             theme_text_color="Primary",
-            font_style="H5",
+            font_style="H6",
             font_name="HebrewFont")
         screen.add_widget(self.label)
 
@@ -47,9 +47,9 @@ class NumerologyCalculator(MDApp):
         self.text_input = MDTextField(
             text="ןרק דח",
             halign="center",
-            pos_hint={"center_x": 0.5, "center_y": 0.30},
+            pos_hint={"center_x": 0.5, "center_y": 0.4},
             size_hint=(0.8, 1),
-            font_size=20,
+            font_size=30,
             font_name="HebrewFont")
         screen.add_widget(self.text_input)
 
@@ -57,7 +57,7 @@ class NumerologyCalculator(MDApp):
         self.output_label = MDLabel(
             text="Result",
             halign="center",
-            pos_hint={"center_x": 0.5, "center_y": 0.20},
+            pos_hint={"center_x": 0.5, "center_y": 0.3},
             theme_text_color="Primary",
             font_style="H6",
             font_name="HebrewFont")
@@ -67,8 +67,8 @@ class NumerologyCalculator(MDApp):
         screen.add_widget(MDFillRoundFlatButton(
             text="בושיח",
             halign="center",
-            font_size=17,
-            pos_hint={"center_x": 0.5, "center_y": 0.1},
+            font_size=30,
+            pos_hint={"center_x": 0.5, "center_y": 0.2},
             on_press=lambda instance: callback(instance, self.text_input.text, self.output_label),
             font_name="HebrewFont"))
 
